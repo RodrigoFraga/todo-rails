@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
   resources :todos do
-    resource :todo_items
-    put 'todo_items/:id', to: 'todo_items#update'
-    delete 'todo_items/:id', to: 'todo_items#destroy'
-
+    resources :todo_items
   end
 
   # resources :todo_items
